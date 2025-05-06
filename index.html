@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <!-- DO NOT CHANGE CODE WITHIN THE HEAD ELEMENT -->
   <!-- UNLESS YOU KNOW WHAT YOU"RE DOING-->
@@ -17,11 +17,146 @@
     <link rel="stylesheet" href="styles/global.css" />
   </head>
   <body>
-    <!-- Header Area -->
-    <header></header>
-    <!-- Main Area -->
-    <main>
-      <h1>My Amazing Portfolio</h1>
-    </main>
+    <header>
+      <h1>Hi, I am Bree</h1>
+      <p>Student | Software Development</p>
+    </header>
+    <section class="intro">
+      <img
+        class="display-pic"
+        src="assets/images/IMG_0006.JPG"
+        alt="image of women"
+        width="250"
+        height="250"
+      />
+      <div class="content">
+        <h2>About me</h2>
+        <p>
+          My name is Bridgette Kamwana, I am Malawian but I was raised in South
+          Africa Cape Town. After spending so many years in South Africa I
+          finally returned to the warm heart of Africa, Malawi.I have been here
+          since 2023. Not knowing what to do with my life I started doing some
+          research and found myself interested in the tech industry.The more I
+          researched the more I fell inlove and wanted to start immediatley.
+          Unfortunately I did not have the financial means to start a formal
+          education, however I came across some free workshops and bootcamps.
+          Now here I am on my journey as a software developer.
+        </p>
+      </div>
+    </section>
+    <section class="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skill-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript (Basic)</li>
+          <li>GitHub</li>
+          <li>Visual Studio Code</li>
+          <li>Problem solving</li>
+          <li>Time management</li>
+          <li>Teamwork</li>
+          <li>Critical thinker</li>
+          <li>Conflict resolution</li>
+          <li>Attention to detail</li>
+          <li>Great at communication</li>
+          <li>Customer service</li>
+          <li>Computer literacy</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about">
+      <div class="container">
+        <h2>More About Me</h2>
+        <div class="about-cards">
+          <div class="card">
+            <h3>Experience</h3>
+            <p>
+              I have decades worth of experience in the customer service
+              industry, which has equipped me to work in any idustry.I know how
+              to build great raport with clients as well as colleagues. I am a
+              team player which is extremely important as there will always be
+              plenty of collaborations.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Hobbies</h3>
+            <p>
+              I love dressing up and going out for brunches, lunches and dinners
+              with friends and loved ones.I love learning new skills, any chance
+              I get I'm on YouTube learning something new (if it can make me
+              money even better).I enjoy watching kdramas, learning korean and
+              listening to music. I love baking and cooking for my family and
+              friends. I also love to travel and enjoy jogging.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="connect">
+      <h2>let's Connect</h2>
+
+      <p>
+        Email:
+        <a href="bridgette.kam@gmail.com">bridgette.kam@gmail.com</a>
+      </p>
+      <p>
+        Github:
+        <a href="https://github.com/Breekam" target="_blank">Breekam</a>
+      </p>
+    </section>
+    <div class="form-container">
+      <h2 class="h2-form">Contact Me</h2>
+      <form id="contactForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required />
+
+        <label for="secondName">Second Name:</label>
+        <input type="text" id="secondName" name="secondName" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formStatus"></p>
+    </div>
+
+    <footer>© 2025 Bridgette Kamwana. All rights reserved.</footer>
+    <script>
+      document
+        .getElementById('contactForm')
+        .addEventListener('submit', function (event) {
+          event.preventDefault()
+
+          const firstName = document.getElementById('firstName').value.trim()
+          const secondName = document.getElementById('secondName').value.trim()
+          const email = document.getElementById('email').value.trim()
+          const message = document.getElementById('message').value.trim()
+          const formStatus = document.getElementById('formStatus')
+
+          if (!firstName || !secondName || !email || !message) {
+            formStatus.textContent = 'Please fill in all fields.'
+            formStatus.style.color = 'red'
+            return
+          }
+
+          const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+          if (!email.match(emailPattern)) {
+            formStatus.textContent = 'Please enter a valid email.'
+            formStatus.style.color = 'red'
+            return
+          }
+
+          formStatus.textContent = 'Form submitted successfully!'
+          formStatus.style.color = 'green'
+
+          document.getElementById('contactForm').reset()
+        })
+    </script>
   </body>
 </html>
