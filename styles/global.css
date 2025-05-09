@@ -133,7 +133,7 @@ body {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.h2-form {
+#h2-form {
   margin-bottom: 20px;
   text-align: center;
 }

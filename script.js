@@ -8,6 +8,7 @@ document
     const email = document.getElementById('email').value.trim()
     const message = document.getElementById('message').value.trim()
     const formStatus = document.getElementById('formStatus')
+    const header = document.getElementById('h2-form')
 
     if (!firstName || !secondName || !email || !message) {
       formStatus.textContent = 'Please fill in all fields.'
@@ -22,8 +23,8 @@ document
       return
     }
 
-    formStatus.textContent = 'Form submitted successfully!'
-    formStatus.style.color = 'green'
+    header.textContent = `Thank you, ${firstName}!`
+    header.style.color = 'green'
 
     document.getElementById('contactForm').reset()
   })
