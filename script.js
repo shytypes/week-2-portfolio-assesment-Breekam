@@ -23,7 +23,7 @@ document
       return
     }
 
-    header.textContent = `Thank you, ${firstName}!`
+    header.textContent = `Thank you, ${firstName} ${secondName} we will get back to you. In the meantime please check your inbox and verify your email is ${email}.`
     header.style.color = 'green'
 
     document.getElementById('contactForm').reset()
